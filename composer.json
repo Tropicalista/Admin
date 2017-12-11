@@ -1,13 +1,13 @@
 {
   "name": "tropicalista/admin",
-  "description": "",
+  "description": "Bolierplate Admin package for laravel",
   "keywords": [],
   "homepage": "",
   "license": "MIT",
   "authors": [
     {
-      "name": "",
-      "email": ""
+      "name": "Francesco Pepe",
+      "email": "francescopepe@email.it"
     }
   ],
   "require": {
