@@ -28,7 +28,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->handleTranslations();
         $this->handleMigrations();
         $this->handleRoutes();
-        $this->app['router']->middleware('role', 'Tropicalista\Admin\RoleMiddleware');
+        $this->app['router']->aliasMiddleware('role', 'Tropicalista\Admin\Middleware\RoleMiddleware');
 
         if(file_exists(storage_path('installed'))){
             App::singleton('site_settings', function(){
