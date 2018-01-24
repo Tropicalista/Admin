@@ -5,8 +5,6 @@
  */
 Route::group(['prefix'=> 'admin', 'middleware' => ['web','auth','role:admin']], function() {
 
-    Route::get('/', ['as' => 'admin.root', 'uses' => '\Tropicalista\Admin\Controllers\DashboardController@index']);
-
     # User Management
     Route::get('users', ['as' => 'admin.users', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getIndex']);
     Route::get('users/data', ['as' => 'admin.users.data', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getData']);
