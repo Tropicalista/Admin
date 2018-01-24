@@ -27,6 +27,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->handleViews();
         $this->handleTranslations();
         $this->handleMigrations();
+        $this->registerCommands();
 
         $this->app['router']->aliasMiddleware('role', 'Tropicalista\Admin\Middleware\RoleMiddleware');
 
