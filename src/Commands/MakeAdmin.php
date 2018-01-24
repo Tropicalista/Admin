@@ -46,25 +46,11 @@ class MakeAdmin extends Command
         file_put_contents(
            // app_path('Http/routes.php'),
            base_path('routes/web.php'),
-            file_get_contents(__DIR__.'/../../../stubs/routes.stub'),
+            file_get_contents(__DIR__.'/../../stubs/routes.stub'),
             FILE_APPEND
         );
         
         $this->comment('Admin scaffolding generated successfully!');
     }
 
-    /**
-     * Compiles the HTTP controller stubs.
-     *
-     * @param $stubName
-     * @return string
-     */
-    protected function compileControllerStub($stubName)
-    {
-        return str_replace(
-            '{{namespace}}',
-            $this->getAppNamespace(),
-            file_get_contents(__DIR__.'/../../../stubs/controllers/'.$stubName.'.stub')
-        );
-    }
 }
