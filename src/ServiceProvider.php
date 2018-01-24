@@ -27,7 +27,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->handleViews();
         $this->handleTranslations();
         $this->handleMigrations();
-        $this->handleRoutes();
+
         $this->app['router']->aliasMiddleware('role', 'Tropicalista\Admin\Middleware\RoleMiddleware');
 
         if(file_exists(storage_path('installed'))){
@@ -80,12 +80,6 @@ class ServiceProvider extends BaseServiceProvider
     private function handleMigrations() {
 
         $this->publishes([__DIR__ . '/../migrations' => base_path('database/migrations')]);
-    }
-
-    private function handleRoutes() {
-
-        $this->loadRoutesFrom(__DIR__.'/../routes.php');
-        //include __DIR__.'/../routes.php';
     }
 
     /**
