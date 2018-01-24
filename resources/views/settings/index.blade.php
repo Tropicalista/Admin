@@ -8,9 +8,9 @@
 				<div class="info-box">
 				  <span class="info-box-icon bg-red"><i class="fa fa-fw fa-dashboard"></i></span>
 				  <div class="info-box-content">
-					<a href="{{ route('admin.settings.show', 'general') }}" title="@lang('admin/settings/messages.general')">
+					<a href="{{ route('admin.settings.show', 'general') }}" title="@lang('admin::settings/messages.general')">
 						<i class="fa fa-fw fa-dashboard"></i>
-						@lang('admin.settings.messages.general')
+						@lang('admin::settings.messages.general')
 					</a>
 				  </div><!-- /.info-box-content -->
 				</div><!-- /.info-box -->					
@@ -19,9 +19,9 @@
 				<div class="info-box">
 				  <span class="info-box-icon bg-red"><i class="fa fa-fw fa-dashboard"></i></span>
 				  <div class="info-box-content">
-					<a href="{{ route('admin.settings.show', 'analytics') }}" title="@lang('admin/settings/messages.analytics')">
+					<a href="{{ route('admin.settings.show', 'analytics') }}" title="@lang('admin::settings/messages.analytics')">
 						<i class="fa fa-fw fa-dashboard"></i>
-						@lang('admin/settings/messages.analytics')
+						@lang('admin::settings/messages.analytics')
 					</a>
 				  </div><!-- /.info-box-content -->
 				</div><!-- /.info-box -->					
@@ -30,9 +30,9 @@
 				<div class="info-box">
 				  <span class="info-box-icon bg-red"><i class="fa fa-fw fa-dashboard"></i></span>
 				  <div class="info-box-content">
-					<a href="{{ route('admin.settings.show', 'ads') }}" title="@lang('admin/settings/messages.ads')">
+					<a href="{{ route('admin.settings.show', 'ads') }}" title="@lang('admin::settings/messages.ads')">
 						<i class="fa fa-fw fa-dashboard"></i>
-						@lang('admin/settings/messages.ads')
+						@lang('admin::settings/messages.ads')
 					</a>
 				  </div><!-- /.info-box-content -->
 				</div><!-- /.info-box -->					
@@ -41,9 +41,9 @@
 				<div class="info-box">
 				  <span class="info-box-icon bg-red"><i class="fa fa-fw fa-dashboard"></i></span>
 				  <div class="info-box-content">
-					<a href="{{ route('admin.settings.show', 'template') }}" title="@lang('admin/settings/messages.layout')">
+					<a href="{{ route('admin.settings.show', 'template') }}" title="@lang('admin::settings/messages.layout')">
 						<i class="fa fa-fw fa-dashboard"></i>
-						@lang('admin/settings/messages.layout')
+						@lang('admin::settings/messages.layout')
 					</a>
 				  </div><!-- /.info-box-content -->
 				</div><!-- /.info-box -->					
