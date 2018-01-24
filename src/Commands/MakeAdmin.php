@@ -15,7 +15,7 @@ class MakeAdmin extends Command
      *
      * @var string
      */
-    protected $signature = 'make:admin {--routes : Only scaffold the Admin routes}';
+    protected $signature = 'make:tropicaladmin {--routes : Only scaffold the Admin routes}';
 
     /**
      * The console command description.
@@ -41,20 +41,15 @@ class MakeAdmin extends Command
      */
     public function handle()
     {
-        $this->createDirectories();
-
-        $this->exportViews();
         
-        if (! $this->option('views')) {
-
-            $this->info('Updated Routes File.');
-            file_put_contents(
-               // app_path('Http/routes.php'),
-               base_path('routes/web.php'),
-                file_get_contents(__DIR__.'/../../../stubs/routes.stub'),
-                FILE_APPEND
-            );
-        }
+        $this->info('Updated Routes File.');
+        file_put_contents(
+           // app_path('Http/routes.php'),
+           base_path('routes/web.php'),
+            file_get_contents(__DIR__.'/../../../stubs/routes.stub'),
+            FILE_APPEND
+        );
+        
         $this->comment('Admin scaffolding generated successfully!');
     }
 
