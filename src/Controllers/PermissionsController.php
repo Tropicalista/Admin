@@ -1,6 +1,6 @@
 <?php 
 
-namespace Tropicalista\Admin\Http\Controllers;
+namespace Tropicalista\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\User;

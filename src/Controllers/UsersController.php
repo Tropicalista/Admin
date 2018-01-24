@@ -60,7 +60,7 @@ class UsersController extends Controller {
     public function getIndex()
     {
         // Title
-        $title = trans('admin/users/title.user_management');
+        $title = trans('admin::users/title.user_management');
 
         // Grab all the users
         $users = $this->user;
