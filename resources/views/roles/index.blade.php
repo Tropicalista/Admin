@@ -29,7 +29,7 @@
 					<th class="col-md-2">{{{ trans('admin::roles/table.users') }}}</th>
 					<th class="col-md-2">{{{ trans('admin::roles/table.created_at') }}}</th>
 					<th class="col-md-2">{{{ trans('admin::roles/table.updated_at') }}}</th>
-					<th class="col-md-2">{{{ trans('admin::table.actions') }}}</th>
+					<th class="col-md-2"></th>
 				</tr>
 			</thead>
 		</table>
