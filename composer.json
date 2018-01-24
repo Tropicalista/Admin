@@ -12,7 +12,7 @@
   ],
   "require": {
       "php": "^7.0.0",
-      "jeroennoten/laravel-adminlte": "dev-master",
+      "jeroennoten/laravel-adminlte": "*",
       "spatie/laravel-analytics": "^3.3",
       "spatie/laravel-permission": "^2.7",
       "yajra/laravel-datatables-oracle": "~8.0"

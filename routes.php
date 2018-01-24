@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['namespace' => 'Tropicalista\Admin\Http\Controllers', 'prefix'=> 'admin', 'middleware' => ['web','auth','role:admin']], function() {
+Route::group(['namespace' => 'Tropicalista\Admin\Http\Controllers', 'prefix'=> 'admin', 'middleware' => ['web','auth','role:user']], function() {
 
     Route::get('/', ['as' => 'admin.root', 'uses' => 'DashboardController@index']);
 
