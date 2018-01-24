@@ -3,50 +3,50 @@
 /**
  * Admin routes
  */
-Route::group(['namespace' => 'Tropicalista\Admin\Http\Controllers', 'prefix'=> 'admin', 'middleware' => ['web','auth','role:admin']], function() {
+Route::group(['prefix'=> 'admin', 'middleware' => ['web','auth','role:admin']], function() {
 
-    Route::get('/', ['as' => 'admin.root', 'uses' => 'DashboardController@index']);
+    Route::get('/', ['as' => 'admin.root', 'uses' => '\Tropicalista\Admin\Controllers\DashboardController@index']);
 
     # User Management
-    Route::get('users', ['as' => 'admin.users', 'uses' => 'UsersController@getIndex']);
-    Route::get('users/data', ['as' => 'admin.users.data', 'uses' => 'UsersController@getData']);
-    Route::get('users/{user}/edit', ['as' => 'admin.users.edit', 'uses' => 'UsersController@getEdit']);
-    Route::post('users/{user}/edit', ['as' => 'admin.users.edit', 'uses' => 'UsersController@postEdit']);
-    Route::get('users/{user}/delete', ['as' => 'admin.users.delete', 'uses' => 'UsersController@getDelete']);
-    Route::get('users/create', ['as' => 'admin.users.create', 'uses' => 'UsersController@getCreate']);
-    Route::post('users/create', ['as' => 'admin.users.create', 'uses' => 'UsersController@postCreate']);
+    Route::get('users', ['as' => 'admin.users', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getIndex']);
+    Route::get('users/data', ['as' => 'admin.users.data', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getData']);
+    Route::get('users/{user}/edit', ['as' => 'admin.users.edit', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getEdit']);
+    Route::post('users/{user}/edit', ['as' => 'admin.users.edit', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@postEdit']);
+    Route::get('users/{user}/delete', ['as' => 'admin.users.delete', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getDelete']);
+    Route::get('users/create', ['as' => 'admin.users.create', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@getCreate']);
+    Route::post('users/create', ['as' => 'admin.users.create', 'uses' => '\Tropicalista\Admin\Controllers\UsersController@postCreate']);
 
     # User Role Management
-    Route::get('roles', ['as' => 'admin.roles', 'uses' => 'RolesController@getIndex']);
-    Route::get('roles/data', ['as' => 'admin.roles.data', 'uses' => 'RolesController@getData']);
-    Route::get('roles/{role}/edit', ['as' => 'admin.roles.edit', 'uses' => 'RolesController@getEdit']);
-    Route::post('roles/{role}/edit', ['as' => 'admin.roles.edit', 'uses' => 'RolesController@postEdit']);
-    Route::get('roles/{role}/delete', ['as' => 'admin.roles.delete', 'uses' => 'RolesController@getDelete']);
-    Route::get('roles/create', ['as' => 'admin.roles.create', 'uses' => 'RolesController@getCreate']);
-    Route::post('roles/create', ['as' => 'admin.roles.create', 'uses' => 'RolesController@postCreate']);
+    Route::get('roles', ['as' => 'admin.roles', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@getIndex']);
+    Route::get('roles/data', ['as' => 'admin.roles.data', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@getData']);
+    Route::get('roles/{role}/edit', ['as' => 'admin.roles.edit', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@getEdit']);
+    Route::post('roles/{role}/edit', ['as' => 'admin.roles.edit', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@postEdit']);
+    Route::get('roles/{role}/delete', ['as' => 'admin.roles.delete', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@getDelete']);
+    Route::get('roles/create', ['as' => 'admin.roles.create', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@getCreate']);
+    Route::post('roles/create', ['as' => 'admin.roles.create', 'uses' => '\Tropicalista\Admin\Controllers\RolesController@postCreate']);
 
    # User Permission Management
-    Route::get('permissions', ['as' => 'admin.permissions', 'uses' => 'PermissionsController@getIndex']);
-    Route::get('permissions/data', ['as' => 'admin.permissions.data', 'uses' => 'PermissionsController@getData']);
-    Route::get('permissions/{permission}/edit', ['as' => 'admin.permissions.edit', 'uses' => 'PermissionsController@getEdit']);
-    Route::post('permissions/{permission}/edit', ['as' => 'admin.permissions.edit', 'uses' => 'PermissionsController@postEdit']);
-    Route::get('permissions/{permission}/delete', ['as' => 'admin.permissions.delete', 'uses' => 'PermissionsController@getDelete']);
-    Route::get('permissions/create', ['as' => 'admin.permissions.create', 'uses' => 'PermissionsController@getCreate']);
-    Route::post('permissions/create', ['as' => 'admin.permissions.create', 'uses' => 'PermissionsController@postCreate']);
+    Route::get('permissions', ['as' => 'admin.permissions', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@getIndex']);
+    Route::get('permissions/data', ['as' => 'admin.permissions.data', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@getData']);
+    Route::get('permissions/{permission}/edit', ['as' => 'admin.permissions.edit', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@getEdit']);
+    Route::post('permissions/{permission}/edit', ['as' => 'admin.permissions.edit', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@postEdit']);
+    Route::get('permissions/{permission}/delete', ['as' => 'admin.permissions.delete', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@getDelete']);
+    Route::get('permissions/create', ['as' => 'admin.permissions.create', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@getCreate']);
+    Route::post('permissions/create', ['as' => 'admin.permissions.create', 'uses' => '\Tropicalista\Admin\Controllers\PermissionsController@postCreate']);
 
     # Settings
     // ===================================
     Route::get('settings', [
         'as'   => 'admin.settings.index',
-        'uses' => 'SettingsController@index'
+        'uses' => '\Tropicalista\Admin\Controllers\SettingsController@index'
     ]);
     Route::get('settings/{settingsGroup}', [
         'as'   => 'admin.settings.show',
-        'uses' => 'SettingsController@show'
+        'uses' => '\Tropicalista\Admin\Controllers\SettingsController@show'
     ]);
     Route::post('settings', [
         'as'   => 'admin.settings.update',
-        'uses' => 'SettingsController@update'
+        'uses' => '\Tropicalista\Admin\Controllers\SettingsController@update'
     ]);
 
 });
