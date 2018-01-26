@@ -1,5 +1,4 @@
-.DS_Store
-/.idea/
-/vendor/
-composer.phar
-
+/vendor
+/.idea
+/node_modules
+/composer.lock
