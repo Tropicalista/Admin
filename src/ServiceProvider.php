@@ -87,4 +87,17 @@ class ServiceProvider extends BaseServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes.php');
         //include __DIR__.'/../routes.php';
     }
+
+    /**
+     * Register scaffolding command
+     */
+    protected function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                Commands\MakeAdmin::class,
+            ]);
+        }
+    }
+
 }
