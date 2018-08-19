@@ -68,7 +68,7 @@ class DashboardController extends Controller
     public function index()
     {
         if( ! file_exists(storage_path('/app/analytics/service-account-credentials.json')) ){
-            return view('admin::dashboard.index', compact('statistics'));
+            return view('admin::dashboard.index');
         }
         $statistics = [
             //'keywords' => Analytics::fetchTopKeywords($this->period, $this->limit),
